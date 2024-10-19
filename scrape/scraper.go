@@ -3,8 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/gocolly/colly/v2"
+	"github.com/tebeka/selenium"
+
 	"go-films-pipline/model"
-	"log"
 	"sync"
 	"time"
 )
@@ -39,17 +40,60 @@ func NewScraper(maxMovies int) *Scraper {
 	}
 }
 
-func main() {
-	c := colly.NewCollector()
+func (s *Scraper) ScrapeMovies() ([]model.Movie, error) {
+	c := s.collector.Clone()
 
-	url := "https://www.imdb.com/chart/top/"
+	count := 0
 
-	c.OnHTML(".cli-parent", func(e *colly.HTMLElement) {
-		fmt.Println(e.ChildText("h3.ipc-title__text"))
+	c.OnHTML("td.titleColumn a", func(e *colly.HTMLElement) {
+		if count >= s.maxMovies {
+			return
+		}
+
+		movieURL := fmt.Sprintf("%s%s", s.baseURL, e.Attr("href"))
+		s.scrapeMovieDetails(movieURL)
+		count++
 	})
 
-	err := c.Visit(url)
+	err := c.Visit(s.baseURL + "/chart/top/")
 	if err != nil {
-		log.Fatal(err)
+		return nil, fmt.Errorf("error visiting IMDB: %w", err)
 	}
+	c.Wait()
+	return s.movies, nil
+
+}
+
+func (s *Scraper) scrapeMovieDetails(url string) {
+
+}
+
+func main() {
+	// Configuration du client Selenium
+	const (
+		port = 4444 // Le port où Selenium écoute
+	)
+
+	// Connexion au WebDriver
+	wd, err := selenium.NewRemote(selenium.Capabilities{"browserName": "chrome"}, fmt.Sprintf("http://localhost:%d/wd/hub", port))
+	if err != nil {
+		panic(err)
+	}
+	defer wd.Quit() // Fermer le navigateur à la fin
+
+	// Accéder à une page
+	if err := wd.Get("http://google.com"); err != nil {
+		panic(err)
+	}
+
+	// Exemple d'attente pour s'assurer que la page est chargée
+	time.Sleep(2 * time.Second)
+
+	// Extraire le titre de la page
+	title, err := wd.Title()
+
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println("Title:", title)
 }
