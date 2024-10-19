@@ -1,8 +1,10 @@
-package scrape
+package main
 
 import (
+	"fmt"
 	"github.com/gocolly/colly/v2"
 	"go-films-pipline/model"
+	"log"
 	"sync"
 	"time"
 )
@@ -34,5 +36,20 @@ func NewScraper(maxMovies int) *Scraper {
 		maxMovies: maxMovies,
 		collector: c,
 		movies:    make([]model.Movie, 0),
+	}
+}
+
+func main() {
+	c := colly.NewCollector()
+
+	url := "https://www.imdb.com/chart/top/"
+
+	c.OnHTML(".cli-parent", func(e *colly.HTMLElement) {
+		fmt.Println(e.ChildText("h3.ipc-title__text"))
+	})
+
+	err := c.Visit(url)
+	if err != nil {
+		log.Fatal(err)
 	}
 }
