@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/gocolly/colly/v2"
 	"github.com/tebeka/selenium"
+	"log"
 
 	"go-films-pipline/model"
 	"sync"
@@ -68,32 +69,118 @@ func (s *Scraper) scrapeMovieDetails(url string) {
 
 }
 
+type Film struct {
+	Title  string
+	URL    string
+	Rating string
+	Year   string
+}
+
+const (
+	seleniumURL = "http://172.17.0.2:4444/wd/hub"
+	maxRetries  = 3
+	waitTime    = 5 * time.Second
+)
+
+func scrapeIMDB(wg *sync.WaitGroup, films chan<- Film) {
+
+	defer wg.Done()
+
+	driver, err := selenium.NewRemote(selenium.Capabilities{"browserName": "chrome"}, "http://localhost:4444/wd/hub")
+
+	if err != nil {
+		log.Printf("Erreur de connexion au WebDriver: %v", err)
+		return
+	}
+
+	defer driver.Quit()
+
+	// Charger une page
+	if err := driver.Get("https://www.imdb.com/chart/top/"); err != nil {
+		log.Printf("Erreur lors du chargement de la page: %v", err)
+		return
+	}
+
+	script := `
+        window.scrollTo(0, document.body.scrollHeight);
+        return document.body.scrollHeight;
+    `
+
+	// Faire défiler plusieurs fois pour charger tout le contenu
+	for i := 0; i < 5; i++ {
+		if _, err := driver.ExecuteScript(script, nil); err != nil {
+			log.Printf("Erreur lors du défilement: %v", err)
+			return
+		}
+		time.Sleep(2 * time.Second) // Attendre un peu plus longtemps
+	}
+
+	extractScript := `
+        return Array.from(document.querySelectorAll('li.ipc-metadata-list-summary-item'))
+    	.map(el => {
+        	const titleElement = el.querySelector('h3.ipc-title__text');
+        	const linkElement = el.querySelector('a.ipc-title-link-wrapper');
+        	const ratingElement = el.querySelector('span.ipc-rating-star--imdb');
+        	const yearElement = el.querySelector("span.cli-title-metadata-item");
+        	return {
+            	title: titleElement ? titleElement.textContent.trim() : '',
+            	url: linkElement ? linkElement.href : '',
+            	rating: ratingElement ? ratingElement.textContent.trim() : '',
+            	year: yearElement ? yearElement.textContent.trim() : '',
+			};
+    	});
+    `
+
+	result, err := driver.ExecuteScript(extractScript, nil)
+	fmt.Println(result)
+	if err != nil {
+		log.Printf("Erreur lors de l'extraction: %v", err)
+		return
+	}
+	fmt.Println(result)
+
+	// Traiter les résultats
+	if movies, ok := result.([]interface{}); ok {
+		for _, movie := range movies {
+			if movieMap, ok := movie.(map[string]interface{}); ok {
+				films <- Film{
+					Title:  movieMap["title"].(string),
+					URL:    movieMap["url"].(string),
+					Rating: movieMap["rating"].(string),
+					Year:   movieMap["year"].(string),
+				}
+			}
+		}
+	} else {
+		log.Println("Le résultat de l'extraction n'est pas un tableau.")
+	}
+}
+
 func main() {
-	// Configuration du client Selenium
-	const (
-		port = 4444 // Le port où Selenium écoute
-	)
+	start := time.Now()
 
-	// Connexion au WebDriver
-	wd, err := selenium.NewRemote(selenium.Capabilities{"browserName": "chrome"}, fmt.Sprintf("http://localhost:%d/wd/hub", port))
-	if err != nil {
-		panic(err)
+	// Créer un canal pour les films
+	films := make(chan Film, 253)
+	var wg sync.WaitGroup
+
+	// Lancer le scraping
+	wg.Add(1)
+	go scrapeIMDB(&wg, films)
+
+	// Goroutine pour collecter les résultats
+	go func() {
+		wg.Wait()
+		close(films)
+	}()
+
+	// Collecter et afficher les résultats
+	var count int
+	for film := range films {
+		count++
+		fmt.Printf("%d. %s (%s) - Note: %s\n    URL: %s\n\n",
+			count, film.Title, film.Year, film.Rating, film.URL)
 	}
-	defer wd.Quit() // Fermer le navigateur à la fin
 
-	// Accéder à une page
-	if err := wd.Get("http://google.com"); err != nil {
-		panic(err)
-	}
-
-	// Exemple d'attente pour s'assurer que la page est chargée
-	time.Sleep(2 * time.Second)
-
-	// Extraire le titre de la page
-	title, err := wd.Title()
-
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println("Title:", title)
+	duration := time.Since(start)
+	fmt.Printf("\nScraping terminé en %s\nNombre total de films : %d\n", duration, count)
 }
