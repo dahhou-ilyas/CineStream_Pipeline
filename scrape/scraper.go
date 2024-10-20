@@ -2,13 +2,11 @@ package main
 
 import (
 	"context"
-	"encoding/json"
 	"fmt"
 	"github.com/gocolly/colly/v2"
 	"github.com/tebeka/selenium"
 	"go-films-pipline/model"
 	"log"
-	"os"
 	"sync"
 	"time"
 )
@@ -78,89 +76,10 @@ type Film struct {
 	Year   string
 }
 
-type Movie struct {
-	Title  string `json:"title"`
-	URL    string `json:"url"`
-	Rating string `json:"rating"`
-	Year   string `json:"year"`
-}
-
 func scrapeIMDB(wg *sync.WaitGroup, films chan<- Film) {
 
 	defer wg.Done()
 
-	driver, err := selenium.NewRemote(selenium.Capabilities{"browserName": "chrome"}, "http://localhost:4444/wd/hub")
-
-	if err != nil {
-		log.Printf("Erreur de connexion au WebDriver: %v", err)
-		return
-	}
-
-	defer driver.Quit()
-
-	// Charger une page
-	if err := driver.Get("https://www.imdb.com/chart/top/"); err != nil {
-		log.Printf("Erreur lors du chargement de la page: %v", err)
-		return
-	}
-
-	script := `
-        window.scrollTo(0, document.body.scrollHeight);
-        return document.body.scrollHeight;
-    `
-
-	// Faire défiler plusieurs fois pour charger tout le contenu
-	for i := 0; i < 5; i++ {
-		if _, err := driver.ExecuteScript(script, nil); err != nil {
-			log.Printf("Erreur lors du défilement: %v", err)
-			return
-		}
-		time.Sleep(2 * time.Second) // Attendre un peu plus longtemps
-	}
-
-	extractScript := `
-        return Array.from(document.querySelectorAll('li.ipc-metadata-list-summary-item'))
-    	.map(el => {
-        	const titleElement = el.querySelector('h3.ipc-title__text');
-        	const linkElement = el.querySelector('a.ipc-title-link-wrapper');
-        	const ratingElement = el.querySelector('span.ipc-rating-star--imdb');
-        	const yearElement = el.querySelector("span.cli-title-metadata-item");
-        	return {
-            	title: titleElement ? titleElement.textContent.trim() : '',
-            	url: linkElement ? linkElement.href : '',
-            	rating: ratingElement ? ratingElement.textContent.trim() : '',
-            	year: yearElement ? yearElement.textContent.trim() : '',
-			};
-    	});
-    `
-
-	result, err := driver.ExecuteScript(extractScript, nil)
-	fmt.Println(result)
-	if err != nil {
-		log.Printf("Erreur lors de l'extraction: %v", err)
-		return
-	}
-	fmt.Println(result)
-
-	// Traiter les résultats
-	if movies, ok := result.([]interface{}); ok {
-		for _, movie := range movies {
-			if movieMap, ok := movie.(map[string]interface{}); ok {
-				films <- Film{
-					Title:  movieMap["title"].(string),
-					URL:    movieMap["url"].(string),
-					Rating: movieMap["rating"].(string),
-					Year:   movieMap["year"].(string),
-				}
-			}
-		}
-	} else {
-		log.Println("Le résultat de l'extraction n'est pas un tableau.")
-	}
-}
-
-func main() {
-	// Configuration pour ARM
 	caps := selenium.Capabilities{
 		"browserName":  "chrome",
 		"platformName": "Linux",
@@ -173,13 +92,9 @@ func main() {
 		},
 	}
 
-	// Contexte avec timeout
-	ctx, cancel := context.WithTimeout(context.Background(), 60*time.Second)
+	_, cancel := context.WithTimeout(context.Background(), 60*time.Second)
 	defer cancel()
 
-	fmt.Println(ctx)
-
-	// Connexion à Selenium
 	seleniumURL := "http://localhost:4444/wd/hub"
 	driver, err := selenium.NewRemote(caps, seleniumURL)
 	if err != nil {
@@ -187,15 +102,12 @@ func main() {
 	}
 	defer driver.Quit()
 
-	// Chargement de la page
 	if err := driver.Get("https://www.imdb.com/chart/top"); err != nil {
 		log.Fatalf("Erreur lors du chargement de la page: %v", err)
 	}
 
-	// Attendre que la page soit chargée
-	time.Sleep(5 * time.Second) // Peut être amélioré avec une attente explicite
+	time.Sleep(5 * time.Second)
 
-	// Script d'extraction
 	extractScript := `
         return Array.from(document.querySelectorAll('li.ipc-metadata-list-summary-item'))
         .map(el => {
@@ -219,55 +131,43 @@ func main() {
         });
     `
 
-	// Exécution du script
 	result, err := driver.ExecuteScript(extractScript, nil)
 	if err != nil {
 		log.Fatalf("Erreur lors de l'exécution du script: %v", err)
 	}
 
-	// Vérification du type de résultat
 	resultSlice, ok := result.([]interface{})
 	if !ok {
 		log.Fatalf("Erreur de type dans le résultat")
 	}
 
-	// Conversion des données
-	var movies []Movie
 	for _, item := range resultSlice {
 		if movieMap, ok := item.(map[string]interface{}); ok {
-			movie := Movie{
+			fmt.Println(movieMap["title"].(string))
+			films <- Film{
 				Title:  fmt.Sprintf("%v", movieMap["title"]),
 				URL:    fmt.Sprintf("%v", movieMap["url"]),
 				Rating: fmt.Sprintf("%v", movieMap["rating"]),
 				Year:   fmt.Sprintf("%v", movieMap["year"]),
 			}
-			movies = append(movies, movie)
 		}
 	}
+}
 
-	// Création du fichier JSON
-	file, err := os.Create("movies.json")
-	if err != nil {
-		log.Fatalf("Erreur lors de la création du fichier: %v", err)
-	}
-	defer file.Close()
+func main() {
+	wg := new(sync.WaitGroup)
 
-	// Encodage en JSON avec indentation
-	encoder := json.NewEncoder(file)
-	encoder.SetIndent("", "    ")
-	if err := encoder.Encode(movies); err != nil {
-		log.Fatalf("Erreur lors de l'encodage JSON: %v", err)
-	}
+	filmsChannel := make(chan Film)
 
-	// Affichage du résumé
-	fmt.Printf("Extraction terminée. %d films ont été extraits et sauvegardés dans movies.json\n", len(movies))
+	wg.Add(1)
+	go scrapeIMDB(wg, filmsChannel)
 
-	// Affichage des 5 premiers films pour vérification
-	fmt.Println("\nAperçu des 5 premiers films :")
-	for i, movie := range movies {
-		if i >= 5 {
-			break
+	go func() {
+		for film := range filmsChannel {
+			fmt.Printf("Title: %s, Year: %s, Rating: %s\n", film.Title, film.Year, film.Rating)
 		}
-		fmt.Printf("%d. %s (%s) - Rating: %s\n", i+1, movie.Title, movie.Year, movie.Rating)
-	}
+	}()
+
+	wg.Wait()
+
 }
