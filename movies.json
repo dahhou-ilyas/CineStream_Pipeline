@@ -1,0 +1,1502 @@
+[
+    {
+        "title": "The Shawshank Redemption",
+        "url": "https://www.imdb.com/title/tt0111161/?ref_=chttp_t_1",
+        "rating": "9.3 (3M)",
+        "year": "1994"
+    },
+    {
+        "title": "The Godfather",
+        "url": "https://www.imdb.com/title/tt0068646/?ref_=chttp_t_2",
+        "rating": "9.2 (2.1M)",
+        "year": "1972"
+    },
+    {
+        "title": "The Dark Knight",
+        "url": "https://www.imdb.com/title/tt0468569/?ref_=chttp_t_3",
+        "rating": "9.0 (2.9M)",
+        "year": "2008"
+    },
+    {
+        "title": "The Godfather Part II",
+        "url": "https://www.imdb.com/title/tt0071562/?ref_=chttp_t_4",
+        "rating": "9.0 (1.4M)",
+        "year": "1974"
+    },
+    {
+        "title": "12 Angry Men",
+        "url": "https://www.imdb.com/title/tt0050083/?ref_=chttp_t_5",
+        "rating": "9.0 (889K)",
+        "year": "1957"
+    },
+    {
+        "title": "The Lord of the Rings: The Return of the King",
+        "url": "https://www.imdb.com/title/tt0167260/?ref_=chttp_t_6",
+        "rating": "9.0 (2M)",
+        "year": "2003"
+    },
+    {
+        "title": "Schindler's List",
+        "url": "https://www.imdb.com/title/tt0108052/?ref_=chttp_t_7",
+        "rating": "9.0 (1.5M)",
+        "year": "1993"
+    },
+    {
+        "title": "Pulp Fiction",
+        "url": "https://www.imdb.com/title/tt0110912/?ref_=chttp_t_8",
+        "rating": "8.9 (2.3M)",
+        "year": "1994"
+    },
+    {
+        "title": "The Lord of the Rings: The Fellowship of the Ring",
+        "url": "https://www.imdb.com/title/tt0120737/?ref_=chttp_t_9",
+        "rating": "8.9 (2.1M)",
+        "year": "2001"
+    },
+    {
+        "title": "The Good, the Bad and the Ugly",
+        "url": "https://www.imdb.com/title/tt0060196/?ref_=chttp_t_10",
+        "rating": "8.8 (828K)",
+        "year": "1966"
+    },
+    {
+        "title": "Forrest Gump",
+        "url": "https://www.imdb.com/title/tt0109830/?ref_=chttp_t_11",
+        "rating": "8.8 (2.3M)",
+        "year": "1994"
+    },
+    {
+        "title": "The Lord of the Rings: The Two Towers",
+        "url": "https://www.imdb.com/title/tt0167261/?ref_=chttp_t_12",
+        "rating": "8.8 (1.8M)",
+        "year": "2002"
+    },
+    {
+        "title": "Fight Club",
+        "url": "https://www.imdb.com/title/tt0137523/?ref_=chttp_t_13",
+        "rating": "8.8 (2.4M)",
+        "year": "1999"
+    },
+    {
+        "title": "Inception",
+        "url": "https://www.imdb.com/title/tt1375666/?ref_=chttp_t_14",
+        "rating": "8.8 (2.6M)",
+        "year": "2010"
+    },
+    {
+        "title": "Star Wars: Episode V - The Empire Strikes Back",
+        "url": "https://www.imdb.com/title/tt0080684/?ref_=chttp_t_15",
+        "rating": "8.7 (1.4M)",
+        "year": "1980"
+    },
+    {
+        "title": "The Matrix",
+        "url": "https://www.imdb.com/title/tt0133093/?ref_=chttp_t_16",
+        "rating": "8.7 (2.1M)",
+        "year": "1999"
+    },
+    {
+        "title": "Goodfellas",
+        "url": "https://www.imdb.com/title/tt0099685/?ref_=chttp_t_17",
+        "rating": "8.7 (1.3M)",
+        "year": "1990"
+    },
+    {
+        "title": "One Flew Over the Cuckoo's Nest",
+        "url": "https://www.imdb.com/title/tt0073486/?ref_=chttp_t_18",
+        "rating": "8.7 (1.1M)",
+        "year": "1975"
+    },
+    {
+        "title": "Interstellar",
+        "url": "https://www.imdb.com/title/tt0816692/?ref_=chttp_t_19",
+        "rating": "8.7 (2.2M)",
+        "year": "2014"
+    },
+    {
+        "title": "Se7en",
+        "url": "https://www.imdb.com/title/tt0114369/?ref_=chttp_t_20",
+        "rating": "8.6 (1.8M)",
+        "year": "1995"
+    },
+    {
+        "title": "It's a Wonderful Life",
+        "url": "https://www.imdb.com/title/tt0038650/?ref_=chttp_t_21",
+        "rating": "8.6 (507K)",
+        "year": "1946"
+    },
+    {
+        "title": "Seven Samurai",
+        "url": "https://www.imdb.com/title/tt0047478/?ref_=chttp_t_22",
+        "rating": "8.6 (374K)",
+        "year": "1954"
+    },
+    {
+        "title": "The Silence of the Lambs",
+        "url": "https://www.imdb.com/title/tt0102926/?ref_=chttp_t_23",
+        "rating": "8.6 (1.6M)",
+        "year": "1991"
+    },
+    {
+        "title": "Saving Private Ryan",
+        "url": "https://www.imdb.com/title/tt0120815/?ref_=chttp_t_24",
+        "rating": "8.6 (1.5M)",
+        "year": "1998"
+    },
+    {
+        "title": "City of God",
+        "url": "https://www.imdb.com/title/tt0317248/?ref_=chttp_t_25",
+        "rating": "8.6 (816K)",
+        "year": "2002"
+    },
+    {
+        "title": "Life Is Beautiful",
+        "url": "https://www.imdb.com/title/tt0118799/?ref_=chttp_t_26",
+        "rating": "8.6 (757K)",
+        "year": "1997"
+    },
+    {
+        "title": "The Green Mile",
+        "url": "https://www.imdb.com/title/tt0120689/?ref_=chttp_t_27",
+        "rating": "8.6 (1.4M)",
+        "year": "1999"
+    },
+    {
+        "title": "Terminator 2: Judgment Day",
+        "url": "https://www.imdb.com/title/tt0103064/?ref_=chttp_t_28",
+        "rating": "8.6 (1.2M)",
+        "year": "1991"
+    },
+    {
+        "title": "Star Wars: Episode IV - A New Hope",
+        "url": "https://www.imdb.com/title/tt0076759/?ref_=chttp_t_29",
+        "rating": "8.6 (1.5M)",
+        "year": "1977"
+    },
+    {
+        "title": "Back to the Future",
+        "url": "https://www.imdb.com/title/tt0088763/?ref_=chttp_t_30",
+        "rating": "8.5 (1.3M)",
+        "year": "1985"
+    },
+    {
+        "title": "Spirited Away",
+        "url": "https://www.imdb.com/title/tt0245429/?ref_=chttp_t_31",
+        "rating": "8.6 (875K)",
+        "year": "2001"
+    },
+    {
+        "title": "The Pianist",
+        "url": "https://www.imdb.com/title/tt0253474/?ref_=chttp_t_32",
+        "rating": "8.5 (935K)",
+        "year": "2002"
+    },
+    {
+        "title": "Parasite",
+        "url": "https://www.imdb.com/title/tt6751668/?ref_=chttp_t_33",
+        "rating": "8.5 (1M)",
+        "year": "2019"
+    },
+    {
+        "title": "Psycho",
+        "url": "https://www.imdb.com/title/tt0054215/?ref_=chttp_t_34",
+        "rating": "8.5 (733K)",
+        "year": "1960"
+    },
+    {
+        "title": "Gladiator",
+        "url": "https://www.imdb.com/title/tt0172495/?ref_=chttp_t_35",
+        "rating": "8.5 (1.7M)",
+        "year": "2000"
+    },
+    {
+        "title": "The Lion King",
+        "url": "https://www.imdb.com/title/tt0110357/?ref_=chttp_t_36",
+        "rating": "8.5 (1.2M)",
+        "year": "1994"
+    },
+    {
+        "title": "Spider-Man: Across the Spider-Verse",
+        "url": "https://www.imdb.com/title/tt9362722/?ref_=chttp_t_37",
+        "rating": "8.6 (409K)",
+        "year": "2023"
+    },
+    {
+        "title": "The Departed",
+        "url": "https://www.imdb.com/title/tt0407887/?ref_=chttp_t_38",
+        "rating": "8.5 (1.4M)",
+        "year": "2006"
+    },
+    {
+        "title": "Whiplash",
+        "url": "https://www.imdb.com/title/tt2582802/?ref_=chttp_t_39",
+        "rating": "8.5 (1M)",
+        "year": "2014"
+    },
+    {
+        "title": "Grave of the Fireflies",
+        "url": "https://www.imdb.com/title/tt0095327/?ref_=chttp_t_40",
+        "rating": "8.5 (325K)",
+        "year": "1988"
+    },
+    {
+        "title": "American History X",
+        "url": "https://www.imdb.com/title/tt0120586/?ref_=chttp_t_41",
+        "rating": "8.5 (1.2M)",
+        "year": "1998"
+    },
+    {
+        "title": "Léon: The Professional",
+        "url": "https://www.imdb.com/title/tt0110413/?ref_=chttp_t_42",
+        "rating": "8.5 (1.3M)",
+        "year": "1994"
+    },
+    {
+        "title": "The Prestige",
+        "url": "https://www.imdb.com/title/tt0482571/?ref_=chttp_t_43",
+        "rating": "8.5 (1.5M)",
+        "year": "2006"
+    },
+    {
+        "title": "Harakiri",
+        "url": "https://www.imdb.com/title/tt0056058/?ref_=chttp_t_44",
+        "rating": "8.6 (72K)",
+        "year": "1962"
+    },
+    {
+        "title": "The Usual Suspects",
+        "url": "https://www.imdb.com/title/tt0114814/?ref_=chttp_t_45",
+        "rating": "8.5 (1.2M)",
+        "year": "1995"
+    },
+    {
+        "title": "Casablanca",
+        "url": "https://www.imdb.com/title/tt0034583/?ref_=chttp_t_46",
+        "rating": "8.5 (616K)",
+        "year": "1942"
+    },
+    {
+        "title": "Dune: Part Two",
+        "url": "https://www.imdb.com/title/tt15239678/?ref_=chttp_t_47",
+        "rating": "8.5 (531K)",
+        "year": "2024"
+    },
+    {
+        "title": "The Intouchables",
+        "url": "https://www.imdb.com/title/tt1675434/?ref_=chttp_t_48",
+        "rating": "8.5 (949K)",
+        "year": "2011"
+    },
+    {
+        "title": "Cinema Paradiso",
+        "url": "https://www.imdb.com/title/tt0095765/?ref_=chttp_t_49",
+        "rating": "8.5 (290K)",
+        "year": "1988"
+    },
+    {
+        "title": "Modern Times",
+        "url": "https://www.imdb.com/title/tt0027977/?ref_=chttp_t_50",
+        "rating": "8.5 (264K)",
+        "year": "1936"
+    },
+    {
+        "title": "Alien",
+        "url": "https://www.imdb.com/title/tt0078748/?ref_=chttp_t_51",
+        "rating": "8.5 (985K)",
+        "year": "1979"
+    },
+    {
+        "title": "Rear Window",
+        "url": "https://www.imdb.com/title/tt0047396/?ref_=chttp_t_52",
+        "rating": "8.5 (532K)",
+        "year": "1954"
+    },
+    {
+        "title": "Once Upon a Time in the West",
+        "url": "https://www.imdb.com/title/tt0064116/?ref_=chttp_t_53",
+        "rating": "8.5 (355K)",
+        "year": "1968"
+    },
+    {
+        "title": "Django Unchained",
+        "url": "https://www.imdb.com/title/tt1853728/?ref_=chttp_t_54",
+        "rating": "8.5 (1.7M)",
+        "year": "2012"
+    },
+    {
+        "title": "City Lights",
+        "url": "https://www.imdb.com/title/tt0021749/?ref_=chttp_t_55",
+        "rating": "8.5 (200K)",
+        "year": "1931"
+    },
+    {
+        "title": "Apocalypse Now",
+        "url": "https://www.imdb.com/title/tt0078788/?ref_=chttp_t_56",
+        "rating": "8.4 (723K)",
+        "year": "1979"
+    },
+    {
+        "title": "Memento",
+        "url": "https://www.imdb.com/title/tt0209144/?ref_=chttp_t_57",
+        "rating": "8.4 (1.3M)",
+        "year": "2000"
+    },
+    {
+        "title": "WALL·E",
+        "url": "https://www.imdb.com/title/tt0910970/?ref_=chttp_t_58",
+        "rating": "8.4 (1.2M)",
+        "year": "2008"
+    },
+    {
+        "title": "Raiders of the Lost Ark",
+        "url": "https://www.imdb.com/title/tt0082971/?ref_=chttp_t_59",
+        "rating": "8.4 (1.1M)",
+        "year": "1981"
+    },
+    {
+        "title": "12th Fail",
+        "url": "https://www.imdb.com/title/tt23849204/?ref_=chttp_t_60",
+        "rating": "8.8 (132K)",
+        "year": "2023"
+    },
+    {
+        "title": "The Lives of Others",
+        "url": "https://www.imdb.com/title/tt0405094/?ref_=chttp_t_61",
+        "rating": "8.4 (417K)",
+        "year": "2006"
+    },
+    {
+        "title": "Sunset Boulevard",
+        "url": "https://www.imdb.com/title/tt0043014/?ref_=chttp_t_62",
+        "rating": "8.4 (241K)",
+        "year": "1950"
+    },
+    {
+        "title": "Avengers: Infinity War",
+        "url": "https://www.imdb.com/title/tt4154756/?ref_=chttp_t_63",
+        "rating": "8.4 (1.2M)",
+        "year": "2018"
+    },
+    {
+        "title": "Paths of Glory",
+        "url": "https://www.imdb.com/title/tt0050825/?ref_=chttp_t_64",
+        "rating": "8.4 (218K)",
+        "year": "1957"
+    },
+    {
+        "title": "Spider-Man: Into the Spider-Verse",
+        "url": "https://www.imdb.com/title/tt4633694/?ref_=chttp_t_65",
+        "rating": "8.4 (696K)",
+        "year": "2018"
+    },
+    {
+        "title": "Witness for the Prosecution",
+        "url": "https://www.imdb.com/title/tt0051201/?ref_=chttp_t_66",
+        "rating": "8.4 (142K)",
+        "year": "1957"
+    },
+    {
+        "title": "The Shining",
+        "url": "https://www.imdb.com/title/tt0081505/?ref_=chttp_t_67",
+        "rating": "8.4 (1.1M)",
+        "year": "1980"
+    },
+    {
+        "title": "The Great Dictator",
+        "url": "https://www.imdb.com/title/tt0032553/?ref_=chttp_t_68",
+        "rating": "8.4 (242K)",
+        "year": "1940"
+    },
+    {
+        "title": "Aliens",
+        "url": "https://www.imdb.com/title/tt0090605/?ref_=chttp_t_69",
+        "rating": "8.4 (788K)",
+        "year": "1986"
+    },
+    {
+        "title": "Inglourious Basterds",
+        "url": "https://www.imdb.com/title/tt0361748/?ref_=chttp_t_70",
+        "rating": "8.4 (1.6M)",
+        "year": "2009"
+    },
+    {
+        "title": "The Dark Knight Rises",
+        "url": "https://www.imdb.com/title/tt1345836/?ref_=chttp_t_71",
+        "rating": "8.4 (1.9M)",
+        "year": "2012"
+    },
+    {
+        "title": "Coco",
+        "url": "https://www.imdb.com/title/tt2380307/?ref_=chttp_t_72",
+        "rating": "8.4 (616K)",
+        "year": "2017"
+    },
+    {
+        "title": "Amadeus",
+        "url": "https://www.imdb.com/title/tt0086879/?ref_=chttp_t_73",
+        "rating": "8.4 (436K)",
+        "year": "1984"
+    },
+    {
+        "title": "Toy Story",
+        "url": "https://www.imdb.com/title/tt0114709/?ref_=chttp_t_74",
+        "rating": "8.3 (1.1M)",
+        "year": "1995"
+    },
+    {
+        "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+        "url": "https://www.imdb.com/title/tt0057012/?ref_=chttp_t_75",
+        "rating": "8.3 (527K)",
+        "year": "1964"
+    },
+    {
+        "title": "Oldboy",
+        "url": "https://www.imdb.com/title/tt0364569/?ref_=chttp_t_76",
+        "rating": "8.3 (653K)",
+        "year": "2003"
+    },
+    {
+        "title": "American Beauty",
+        "url": "https://www.imdb.com/title/tt0169547/?ref_=chttp_t_77",
+        "rating": "8.3 (1.2M)",
+        "year": "1999"
+    },
+    {
+        "title": "Avengers: Endgame",
+        "url": "https://www.imdb.com/title/tt4154796/?ref_=chttp_t_78",
+        "rating": "8.4 (1.3M)",
+        "year": "2019"
+    },
+    {
+        "title": "Das Boot",
+        "url": "https://www.imdb.com/title/tt0082096/?ref_=chttp_t_79",
+        "rating": "8.4 (269K)",
+        "year": "1981"
+    },
+    {
+        "title": "Braveheart",
+        "url": "https://www.imdb.com/title/tt0112573/?ref_=chttp_t_80",
+        "rating": "8.3 (1.1M)",
+        "year": "1995"
+    },
+    {
+        "title": "Good Will Hunting",
+        "url": "https://www.imdb.com/title/tt0119217/?ref_=chttp_t_81",
+        "rating": "8.3 (1.1M)",
+        "year": "1997"
+    },
+    {
+        "title": "Princess Mononoke",
+        "url": "https://www.imdb.com/title/tt0119698/?ref_=chttp_t_82",
+        "rating": "8.3 (445K)",
+        "year": "1997"
+    },
+    {
+        "title": "Your Name.",
+        "url": "https://www.imdb.com/title/tt5311514/?ref_=chttp_t_83",
+        "rating": "8.4 (336K)",
+        "year": "2016"
+    },
+    {
+        "title": "Joker",
+        "url": "https://www.imdb.com/title/tt7286456/?ref_=chttp_t_84",
+        "rating": "8.4 (1.5M)",
+        "year": "2019"
+    },
+    {
+        "title": "High and Low",
+        "url": "https://www.imdb.com/title/tt0057565/?ref_=chttp_t_85",
+        "rating": "8.4 (56K)",
+        "year": "1963"
+    },
+    {
+        "title": "3 Idiots",
+        "url": "https://www.imdb.com/title/tt1187043/?ref_=chttp_t_86",
+        "rating": "8.4 (445K)",
+        "year": "2009"
+    },
+    {
+        "title": "Once Upon a Time in America",
+        "url": "https://www.imdb.com/title/tt0087843/?ref_=chttp_t_87",
+        "rating": "8.3 (384K)",
+        "year": "1984"
+    },
+    {
+        "title": "Singin' in the Rain",
+        "url": "https://www.imdb.com/title/tt0045152/?ref_=chttp_t_88",
+        "rating": "8.3 (266K)",
+        "year": "1952"
+    },
+    {
+        "title": "Capernaum",
+        "url": "https://www.imdb.com/title/tt8267604/?ref_=chttp_t_89",
+        "rating": "8.4 (110K)",
+        "year": "2018"
+    },
+    {
+        "title": "Come and See",
+        "url": "https://www.imdb.com/title/tt0091251/?ref_=chttp_t_90",
+        "rating": "8.4 (103K)",
+        "year": "1985"
+    },
+    {
+        "title": "Requiem for a Dream",
+        "url": "https://www.imdb.com/title/tt0180093/?ref_=chttp_t_91",
+        "rating": "8.3 (916K)",
+        "year": "2000"
+    },
+    {
+        "title": "Toy Story 3",
+        "url": "https://www.imdb.com/title/tt0435761/?ref_=chttp_t_92",
+        "rating": "8.3 (909K)",
+        "year": "2010"
+    },
+    {
+        "title": "Star Wars: Episode VI - Return of the Jedi",
+        "url": "https://www.imdb.com/title/tt0086190/?ref_=chttp_t_93",
+        "rating": "8.3 (1.1M)",
+        "year": "1983"
+    },
+    {
+        "title": "The Hunt",
+        "url": "https://www.imdb.com/title/tt2106476/?ref_=chttp_t_94",
+        "rating": "8.3 (374K)",
+        "year": "2012"
+    },
+    {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "url": "https://www.imdb.com/title/tt0338013/?ref_=chttp_t_95",
+        "rating": "8.3 (1.1M)",
+        "year": "2004"
+    },
+    {
+        "title": "2001: A Space Odyssey",
+        "url": "https://www.imdb.com/title/tt0062622/?ref_=chttp_t_96",
+        "rating": "8.3 (733K)",
+        "year": "1968"
+    },
+    {
+        "title": "Ikiru",
+        "url": "https://www.imdb.com/title/tt0044741/?ref_=chttp_t_97",
+        "rating": "8.3 (90K)",
+        "year": "1952"
+    },
+    {
+        "title": "Reservoir Dogs",
+        "url": "https://www.imdb.com/title/tt0105236/?ref_=chttp_t_98",
+        "rating": "8.3 (1.1M)",
+        "year": "1992"
+    },
+    {
+        "title": "Lawrence of Arabia",
+        "url": "https://www.imdb.com/title/tt0056172/?ref_=chttp_t_99",
+        "rating": "8.3 (321K)",
+        "year": "1962"
+    },
+    {
+        "title": "The Apartment",
+        "url": "https://www.imdb.com/title/tt0053604/?ref_=chttp_t_100",
+        "rating": "8.3 (201K)",
+        "year": "1960"
+    },
+    {
+        "title": "Incendies",
+        "url": "https://www.imdb.com/title/tt1255953/?ref_=chttp_t_101",
+        "rating": "8.3 (212K)",
+        "year": "2010"
+    },
+    {
+        "title": "Scarface",
+        "url": "https://www.imdb.com/title/tt0086250/?ref_=chttp_t_102",
+        "rating": "8.3 (937K)",
+        "year": "1983"
+    },
+    {
+        "title": "North by Northwest",
+        "url": "https://www.imdb.com/title/tt0053125/?ref_=chttp_t_103",
+        "rating": "8.3 (352K)",
+        "year": "1959"
+    },
+    {
+        "title": "Double Indemnity",
+        "url": "https://www.imdb.com/title/tt0036775/?ref_=chttp_t_104",
+        "rating": "8.3 (170K)",
+        "year": "1944"
+    },
+    {
+        "title": "Citizen Kane",
+        "url": "https://www.imdb.com/title/tt0033467/?ref_=chttp_t_105",
+        "rating": "8.3 (472K)",
+        "year": "1941"
+    },
+    {
+        "title": "Oppenheimer",
+        "url": "https://www.imdb.com/title/tt15398776/?ref_=chttp_t_106",
+        "rating": "8.3 (806K)",
+        "year": "2023"
+    },
+    {
+        "title": "M",
+        "url": "https://www.imdb.com/title/tt0022100/?ref_=chttp_t_107",
+        "rating": "8.3 (172K)",
+        "year": "1931"
+    },
+    {
+        "title": "Vertigo",
+        "url": "https://www.imdb.com/title/tt0052357/?ref_=chttp_t_108",
+        "rating": "8.3 (435K)",
+        "year": "1958"
+    },
+    {
+        "title": "Heat",
+        "url": "https://www.imdb.com/title/tt0113277/?ref_=chttp_t_109",
+        "rating": "8.3 (734K)",
+        "year": "1995"
+    },
+    {
+        "title": "Full Metal Jacket",
+        "url": "https://www.imdb.com/title/tt0093058/?ref_=chttp_t_110",
+        "rating": "8.2 (804K)",
+        "year": "1987"
+    },
+    {
+        "title": "Amélie",
+        "url": "https://www.imdb.com/title/tt0211915/?ref_=chttp_t_111",
+        "rating": "8.3 (805K)",
+        "year": "2001"
+    },
+    {
+        "title": "Up",
+        "url": "https://www.imdb.com/title/tt1049413/?ref_=chttp_t_112",
+        "rating": "8.3 (1.1M)",
+        "year": "2009"
+    },
+    {
+        "title": "A Clockwork Orange",
+        "url": "https://www.imdb.com/title/tt0066921/?ref_=chttp_t_113",
+        "rating": "8.2 (894K)",
+        "year": "1971"
+    },
+    {
+        "title": "To Kill a Mockingbird",
+        "url": "https://www.imdb.com/title/tt0056592/?ref_=chttp_t_114",
+        "rating": "8.3 (337K)",
+        "year": "1962"
+    },
+    {
+        "title": "A Separation",
+        "url": "https://www.imdb.com/title/tt1832382/?ref_=chttp_t_115",
+        "rating": "8.3 (263K)",
+        "year": "2011"
+    },
+    {
+        "title": "The Sting",
+        "url": "https://www.imdb.com/title/tt0070735/?ref_=chttp_t_116",
+        "rating": "8.3 (284K)",
+        "year": "1973"
+    },
+    {
+        "title": "Die Hard",
+        "url": "https://www.imdb.com/title/tt0095016/?ref_=chttp_t_117",
+        "rating": "8.2 (961K)",
+        "year": "1988"
+    },
+    {
+        "title": "Indiana Jones and the Last Crusade",
+        "url": "https://www.imdb.com/title/tt0097576/?ref_=chttp_t_118",
+        "rating": "8.2 (823K)",
+        "year": "1989"
+    },
+    {
+        "title": "Like Stars on Earth",
+        "url": "https://www.imdb.com/title/tt0986264/?ref_=chttp_t_119",
+        "rating": "8.3 (211K)",
+        "year": "2007"
+    },
+    {
+        "title": "Metropolis",
+        "url": "https://www.imdb.com/title/tt0017136/?ref_=chttp_t_120",
+        "rating": "8.3 (189K)",
+        "year": "1927"
+    },
+    {
+        "title": "Snatch",
+        "url": "https://www.imdb.com/title/tt0208092/?ref_=chttp_t_121",
+        "rating": "8.2 (925K)",
+        "year": "2000"
+    },
+    {
+        "title": "1917",
+        "url": "https://www.imdb.com/title/tt8579674/?ref_=chttp_t_122",
+        "rating": "8.2 (699K)",
+        "year": "2019"
+    },
+    {
+        "title": "L.A. Confidential",
+        "url": "https://www.imdb.com/title/tt0119488/?ref_=chttp_t_123",
+        "rating": "8.2 (628K)",
+        "year": "1997"
+    },
+    {
+        "title": "Bicycle Thieves",
+        "url": "https://www.imdb.com/title/tt0040522/?ref_=chttp_t_124",
+        "rating": "8.3 (179K)",
+        "year": "1948"
+    },
+    {
+        "title": "Downfall",
+        "url": "https://www.imdb.com/title/tt0363163/?ref_=chttp_t_125",
+        "rating": "8.2 (381K)",
+        "year": "2004"
+    },
+    {
+        "title": "Hamilton",
+        "url": "https://www.imdb.com/title/tt8503618/?ref_=chttp_t_126",
+        "rating": "8.3 (119K)",
+        "year": "2020"
+    },
+    {
+        "title": "Taxi Driver",
+        "url": "https://www.imdb.com/title/tt0075314/?ref_=chttp_t_127",
+        "rating": "8.2 (945K)",
+        "year": "1976"
+    },
+    {
+        "title": "Dangal",
+        "url": "https://www.imdb.com/title/tt5074352/?ref_=chttp_t_128",
+        "rating": "8.3 (217K)",
+        "year": "2016"
+    },
+    {
+        "title": "Batman Begins",
+        "url": "https://www.imdb.com/title/tt0372784/?ref_=chttp_t_129",
+        "rating": "8.2 (1.6M)",
+        "year": "2005"
+    },
+    {
+        "title": "The Wolf of Wall Street",
+        "url": "https://www.imdb.com/title/tt0993846/?ref_=chttp_t_130",
+        "rating": "8.2 (1.6M)",
+        "year": "2013"
+    },
+    {
+        "title": "For a Few Dollars More",
+        "url": "https://www.imdb.com/title/tt0059578/?ref_=chttp_t_131",
+        "rating": "8.2 (280K)",
+        "year": "1965"
+    },
+    {
+        "title": "Green Book",
+        "url": "https://www.imdb.com/title/tt6966692/?ref_=chttp_t_132",
+        "rating": "8.2 (599K)",
+        "year": "2018"
+    },
+    {
+        "title": "Some Like It Hot",
+        "url": "https://www.imdb.com/title/tt0053291/?ref_=chttp_t_133",
+        "rating": "8.2 (288K)",
+        "year": "1959"
+    },
+    {
+        "title": "The Truman Show",
+        "url": "https://www.imdb.com/title/tt0120382/?ref_=chttp_t_134",
+        "rating": "8.2 (1.2M)",
+        "year": "1998"
+    },
+    {
+        "title": "Judgment at Nuremberg",
+        "url": "https://www.imdb.com/title/tt0055031/?ref_=chttp_t_135",
+        "rating": "8.3 (87K)",
+        "year": "1961"
+    },
+    {
+        "title": "The Kid",
+        "url": "https://www.imdb.com/title/tt0012349/?ref_=chttp_t_136",
+        "rating": "8.2 (137K)",
+        "year": "1921"
+    },
+    {
+        "title": "The Father",
+        "url": "https://www.imdb.com/title/tt10272386/?ref_=chttp_t_137",
+        "rating": "8.2 (202K)",
+        "year": "2020"
+    },
+    {
+        "title": "All About Eve",
+        "url": "https://www.imdb.com/title/tt0042192/?ref_=chttp_t_138",
+        "rating": "8.2 (141K)",
+        "year": "1950"
+    },
+    {
+        "title": "Shutter Island",
+        "url": "https://www.imdb.com/title/tt1130884/?ref_=chttp_t_139",
+        "rating": "8.2 (1.5M)",
+        "year": "2010"
+    },
+    {
+        "title": "There Will Be Blood",
+        "url": "https://www.imdb.com/title/tt0469494/?ref_=chttp_t_140",
+        "rating": "8.2 (653K)",
+        "year": "2007"
+    },
+    {
+        "title": "Jurassic Park",
+        "url": "https://www.imdb.com/title/tt0107290/?ref_=chttp_t_141",
+        "rating": "8.2 (1.1M)",
+        "year": "1993"
+    },
+    {
+        "title": "Casino",
+        "url": "https://www.imdb.com/title/tt0112641/?ref_=chttp_t_142",
+        "rating": "8.2 (576K)",
+        "year": "1995"
+    },
+    {
+        "title": "Top Gun: Maverick",
+        "url": "https://www.imdb.com/title/tt1745960/?ref_=chttp_t_143",
+        "rating": "8.2 (735K)",
+        "year": "2022"
+    },
+    {
+        "title": "Ran",
+        "url": "https://www.imdb.com/title/tt0089881/?ref_=chttp_t_144",
+        "rating": "8.2 (139K)",
+        "year": "1985"
+    },
+    {
+        "title": "The Sixth Sense",
+        "url": "https://www.imdb.com/title/tt0167404/?ref_=chttp_t_145",
+        "rating": "8.2 (1.1M)",
+        "year": "1999"
+    },
+    {
+        "title": "Pan's Labyrinth",
+        "url": "https://www.imdb.com/title/tt0457430/?ref_=chttp_t_146",
+        "rating": "8.2 (712K)",
+        "year": "2006"
+    },
+    {
+        "title": "Unforgiven",
+        "url": "https://www.imdb.com/title/tt0105695/?ref_=chttp_t_147",
+        "rating": "8.2 (443K)",
+        "year": "1992"
+    },
+    {
+        "title": "No Country for Old Men",
+        "url": "https://www.imdb.com/title/tt0477348/?ref_=chttp_t_148",
+        "rating": "8.2 (1.1M)",
+        "year": "2007"
+    },
+    {
+        "title": "The Thing",
+        "url": "https://www.imdb.com/title/tt0084787/?ref_=chttp_t_149",
+        "rating": "8.2 (480K)",
+        "year": "1982"
+    },
+    {
+        "title": "A Beautiful Mind",
+        "url": "https://www.imdb.com/title/tt0268978/?ref_=chttp_t_150",
+        "rating": "8.2 (1M)",
+        "year": "2001"
+    },
+    {
+        "title": "Kill Bill: Vol. 1",
+        "url": "https://www.imdb.com/title/tt0266697/?ref_=chttp_t_151",
+        "rating": "8.2 (1.2M)",
+        "year": "2003"
+    },
+    {
+        "title": "The Treasure of the Sierra Madre",
+        "url": "https://www.imdb.com/title/tt0040897/?ref_=chttp_t_152",
+        "rating": "8.2 (134K)",
+        "year": "1948"
+    },
+    {
+        "title": "Yojimbo",
+        "url": "https://www.imdb.com/title/tt0055630/?ref_=chttp_t_153",
+        "rating": "8.2 (134K)",
+        "year": "1961"
+    },
+    {
+        "title": "The Great Escape",
+        "url": "https://www.imdb.com/title/tt0057115/?ref_=chttp_t_154",
+        "rating": "8.2 (263K)",
+        "year": "1963"
+    },
+    {
+        "title": "Finding Nemo",
+        "url": "https://www.imdb.com/title/tt0266543/?ref_=chttp_t_155",
+        "rating": "8.2 (1.1M)",
+        "year": "2003"
+    },
+    {
+        "title": "Monty Python and the Holy Grail",
+        "url": "https://www.imdb.com/title/tt0071853/?ref_=chttp_t_156",
+        "rating": "8.2 (578K)",
+        "year": "1975"
+    },
+    {
+        "title": "Prisoners",
+        "url": "https://www.imdb.com/title/tt1392214/?ref_=chttp_t_157",
+        "rating": "8.2 (836K)",
+        "year": "2013"
+    },
+    {
+        "title": "Howl's Moving Castle",
+        "url": "https://www.imdb.com/title/tt0347149/?ref_=chttp_t_158",
+        "rating": "8.2 (464K)",
+        "year": "2004"
+    },
+    {
+        "title": "The Elephant Man",
+        "url": "https://www.imdb.com/title/tt0080678/?ref_=chttp_t_159",
+        "rating": "8.2 (263K)",
+        "year": "1980"
+    },
+    {
+        "title": "Rashomon",
+        "url": "https://www.imdb.com/title/tt0042876/?ref_=chttp_t_160",
+        "rating": "8.2 (184K)",
+        "year": "1950"
+    },
+    {
+        "title": "Dial M for Murder",
+        "url": "https://www.imdb.com/title/tt0046912/?ref_=chttp_t_161",
+        "rating": "8.2 (193K)",
+        "year": "1954"
+    },
+    {
+        "title": "Chinatown",
+        "url": "https://www.imdb.com/title/tt0071315/?ref_=chttp_t_162",
+        "rating": "8.1 (357K)",
+        "year": "1974"
+    },
+    {
+        "title": "The Wild Robot",
+        "url": "https://www.imdb.com/title/tt29623480/?ref_=chttp_t_163",
+        "rating": "8.4 (31K)",
+        "year": "2024"
+    },
+    {
+        "title": "Gone with the Wind",
+        "url": "https://www.imdb.com/title/tt0031381/?ref_=chttp_t_164",
+        "rating": "8.2 (339K)",
+        "year": "1939"
+    },
+    {
+        "title": "The Secret in Their Eyes",
+        "url": "https://www.imdb.com/title/tt1305806/?ref_=chttp_t_165",
+        "rating": "8.2 (226K)",
+        "year": "2009"
+    },
+    {
+        "title": "Lock, Stock and Two Smoking Barrels",
+        "url": "https://www.imdb.com/title/tt0120735/?ref_=chttp_t_166",
+        "rating": "8.1 (625K)",
+        "year": "1998"
+    },
+    {
+        "title": "Inside Out",
+        "url": "https://www.imdb.com/title/tt2096673/?ref_=chttp_t_167",
+        "rating": "8.1 (835K)",
+        "year": "2015"
+    },
+    {
+        "title": "V for Vendetta",
+        "url": "https://www.imdb.com/title/tt0434409/?ref_=chttp_t_168",
+        "rating": "8.1 (1.2M)",
+        "year": "2005"
+    },
+    {
+        "title": "Three Billboards Outside Ebbing, Missouri",
+        "url": "https://www.imdb.com/title/tt5027774/?ref_=chttp_t_169",
+        "rating": "8.1 (566K)",
+        "year": "2017"
+    },
+    {
+        "title": "Raging Bull",
+        "url": "https://www.imdb.com/title/tt0081398/?ref_=chttp_t_170",
+        "rating": "8.1 (386K)",
+        "year": "1980"
+    },
+    {
+        "title": "Trainspotting",
+        "url": "https://www.imdb.com/title/tt0117951/?ref_=chttp_t_171",
+        "rating": "8.1 (736K)",
+        "year": "1996"
+    },
+    {
+        "title": "The Bridge on the River Kwai",
+        "url": "https://www.imdb.com/title/tt0050212/?ref_=chttp_t_172",
+        "rating": "8.1 (237K)",
+        "year": "1957"
+    },
+    {
+        "title": "Klaus",
+        "url": "https://www.imdb.com/title/tt4729430/?ref_=chttp_t_173",
+        "rating": "8.2 (196K)",
+        "year": "2019"
+    },
+    {
+        "title": "Catch Me If You Can",
+        "url": "https://www.imdb.com/title/tt0264464/?ref_=chttp_t_174",
+        "rating": "8.1 (1.1M)",
+        "year": "2002"
+    },
+    {
+        "title": "Fargo",
+        "url": "https://www.imdb.com/title/tt0116282/?ref_=chttp_t_175",
+        "rating": "8.1 (738K)",
+        "year": "1996"
+    },
+    {
+        "title": "Warrior",
+        "url": "https://www.imdb.com/title/tt1291584/?ref_=chttp_t_176",
+        "rating": "8.1 (504K)",
+        "year": "2011"
+    },
+    {
+        "title": "Spider-Man: No Way Home",
+        "url": "https://www.imdb.com/title/tt10872600/?ref_=chttp_t_177",
+        "rating": "8.2 (910K)",
+        "year": "2021"
+    },
+    {
+        "title": "Gran Torino",
+        "url": "https://www.imdb.com/title/tt1205489/?ref_=chttp_t_178",
+        "rating": "8.1 (825K)",
+        "year": "2008"
+    },
+    {
+        "title": "Harry Potter and the Deathly Hallows: Part 2",
+        "url": "https://www.imdb.com/title/tt1201607/?ref_=chttp_t_179",
+        "rating": "8.1 (968K)",
+        "year": "2011"
+    },
+    {
+        "title": "Million Dollar Baby",
+        "url": "https://www.imdb.com/title/tt0405159/?ref_=chttp_t_180",
+        "rating": "8.1 (732K)",
+        "year": "2004"
+    },
+    {
+        "title": "My Neighbor Totoro",
+        "url": "https://www.imdb.com/title/tt0096283/?ref_=chttp_t_181",
+        "rating": "8.1 (392K)",
+        "year": "1988"
+    },
+    {
+        "title": "Mad Max: Fury Road",
+        "url": "https://www.imdb.com/title/tt1392190/?ref_=chttp_t_182",
+        "rating": "8.1 (1.1M)",
+        "year": "2015"
+    },
+    {
+        "title": "Children of Heaven",
+        "url": "https://www.imdb.com/title/tt0118849/?ref_=chttp_t_183",
+        "rating": "8.2 (83K)",
+        "year": "1997"
+    },
+    {
+        "title": "Ben-Hur",
+        "url": "https://www.imdb.com/title/tt0052618/?ref_=chttp_t_184",
+        "rating": "8.1 (257K)",
+        "year": "1959"
+    },
+    {
+        "title": "12 Years a Slave",
+        "url": "https://www.imdb.com/title/tt2024544/?ref_=chttp_t_185",
+        "rating": "8.1 (751K)",
+        "year": "2013"
+    },
+    {
+        "title": "Barry Lyndon",
+        "url": "https://www.imdb.com/title/tt0072684/?ref_=chttp_t_186",
+        "rating": "8.1 (187K)",
+        "year": "1975"
+    },
+    {
+        "title": "Before Sunrise",
+        "url": "https://www.imdb.com/title/tt0112471/?ref_=chttp_t_187",
+        "rating": "8.1 (348K)",
+        "year": "1995"
+    },
+    {
+        "title": "Blade Runner",
+        "url": "https://www.imdb.com/title/tt0083658/?ref_=chttp_t_188",
+        "rating": "8.1 (837K)",
+        "year": "1982"
+    },
+    {
+        "title": "The Grand Budapest Hotel",
+        "url": "https://www.imdb.com/title/tt2278388/?ref_=chttp_t_189",
+        "rating": "8.1 (904K)",
+        "year": "2014"
+    },
+    {
+        "title": "Hacksaw Ridge",
+        "url": "https://www.imdb.com/title/tt2119532/?ref_=chttp_t_190",
+        "rating": "8.1 (613K)",
+        "year": "2016"
+    },
+    {
+        "title": "Gone Girl",
+        "url": "https://www.imdb.com/title/tt2267998/?ref_=chttp_t_191",
+        "rating": "8.1 (1.1M)",
+        "year": "2014"
+    },
+    {
+        "title": "Dead Poets Society",
+        "url": "https://www.imdb.com/title/tt0097165/?ref_=chttp_t_192",
+        "rating": "8.1 (565K)",
+        "year": "1989"
+    },
+    {
+        "title": "Memories of Murder",
+        "url": "https://www.imdb.com/title/tt0353969/?ref_=chttp_t_193",
+        "rating": "8.1 (226K)",
+        "year": "2003"
+    },
+    {
+        "title": "Maharaja",
+        "url": "https://www.imdb.com/title/tt26548265/?ref_=chttp_t_194",
+        "rating": "8.5 (50K)",
+        "year": "2024"
+    },
+    {
+        "title": "In the Name of the Father",
+        "url": "https://www.imdb.com/title/tt0107207/?ref_=chttp_t_195",
+        "rating": "8.1 (191K)",
+        "year": "1993"
+    },
+    {
+        "title": "The Gold Rush",
+        "url": "https://www.imdb.com/title/tt0015864/?ref_=chttp_t_196",
+        "rating": "8.1 (121K)",
+        "year": "1925"
+    },
+    {
+        "title": "Monsters, Inc.",
+        "url": "https://www.imdb.com/title/tt0198781/?ref_=chttp_t_197",
+        "rating": "8.1 (1M)",
+        "year": "2001"
+    },
+    {
+        "title": "Wild Tales",
+        "url": "https://www.imdb.com/title/tt3011894/?ref_=chttp_t_198",
+        "rating": "8.1 (221K)",
+        "year": "2014"
+    },
+    {
+        "title": "The Deer Hunter",
+        "url": "https://www.imdb.com/title/tt0077416/?ref_=chttp_t_199",
+        "rating": "8.1 (368K)",
+        "year": "1978"
+    },
+    {
+        "title": "Ratatouille",
+        "url": "https://www.imdb.com/title/tt0382932/?ref_=chttp_t_200",
+        "rating": "8.1 (852K)",
+        "year": "2007"
+    },
+    {
+        "title": "Sherlock Jr.",
+        "url": "https://www.imdb.com/title/tt0015324/?ref_=chttp_t_201",
+        "rating": "8.2 (59K)",
+        "year": "1924"
+    },
+    {
+        "title": "Jaws",
+        "url": "https://www.imdb.com/title/tt0073195/?ref_=chttp_t_202",
+        "rating": "8.1 (677K)",
+        "year": "1975"
+    },
+    {
+        "title": "The General",
+        "url": "https://www.imdb.com/title/tt0017925/?ref_=chttp_t_203",
+        "rating": "8.1 (100K)",
+        "year": "1926"
+    },
+    {
+        "title": "How to Train Your Dragon",
+        "url": "https://www.imdb.com/title/tt0892769/?ref_=chttp_t_204",
+        "rating": "8.1 (818K)",
+        "year": "2010"
+    },
+    {
+        "title": "On the Waterfront",
+        "url": "https://www.imdb.com/title/tt0047296/?ref_=chttp_t_205",
+        "rating": "8.1 (168K)",
+        "year": "1954"
+    },
+    {
+        "title": "Mary and Max",
+        "url": "https://www.imdb.com/title/tt0978762/?ref_=chttp_t_206",
+        "rating": "8.1 (190K)",
+        "year": "2009"
+    },
+    {
+        "title": "The Wages of Fear",
+        "url": "https://www.imdb.com/title/tt0046268/?ref_=chttp_t_207",
+        "rating": "8.1 (68K)",
+        "year": "1953"
+    },
+    {
+        "title": "Ford v Ferrari",
+        "url": "https://www.imdb.com/title/tt1950186/?ref_=chttp_t_208",
+        "rating": "8.1 (498K)",
+        "year": "2019"
+    },
+    {
+        "title": "Wild Strawberries",
+        "url": "https://www.imdb.com/title/tt0050986/?ref_=chttp_t_209",
+        "rating": "8.1 (117K)",
+        "year": "1957"
+    },
+    {
+        "title": "Mr. Smith Goes to Washington",
+        "url": "https://www.imdb.com/title/tt0031679/?ref_=chttp_t_210",
+        "rating": "8.1 (123K)",
+        "year": "1939"
+    },
+    {
+        "title": "The Third Man",
+        "url": "https://www.imdb.com/title/tt0041959/?ref_=chttp_t_211",
+        "rating": "8.1 (185K)",
+        "year": "1949"
+    },
+    {
+        "title": "Logan",
+        "url": "https://www.imdb.com/title/tt3315342/?ref_=chttp_t_212",
+        "rating": "8.1 (864K)",
+        "year": "2017"
+    },
+    {
+        "title": "Rocky",
+        "url": "https://www.imdb.com/title/tt0075148/?ref_=chttp_t_213",
+        "rating": "8.1 (642K)",
+        "year": "1976"
+    },
+    {
+        "title": "Tokyo Story",
+        "url": "https://www.imdb.com/title/tt0046438/?ref_=chttp_t_214",
+        "rating": "8.1 (71K)",
+        "year": "1953"
+    },
+    {
+        "title": "The Big Lebowski",
+        "url": "https://www.imdb.com/title/tt0118715/?ref_=chttp_t_215",
+        "rating": "8.1 (874K)",
+        "year": "1998"
+    },
+    {
+        "title": "The Seventh Seal",
+        "url": "https://www.imdb.com/title/tt0050976/?ref_=chttp_t_216",
+        "rating": "8.1 (202K)",
+        "year": "1957"
+    },
+    {
+        "title": "Room",
+        "url": "https://www.imdb.com/title/tt3170832/?ref_=chttp_t_217",
+        "rating": "8.1 (459K)",
+        "year": "2015"
+    },
+    {
+        "title": "Spotlight",
+        "url": "https://www.imdb.com/title/tt1895587/?ref_=chttp_t_218",
+        "rating": "8.1 (509K)",
+        "year": "2015"
+    },
+    {
+        "title": "The Terminator",
+        "url": "https://www.imdb.com/title/tt0088247/?ref_=chttp_t_219",
+        "rating": "8.1 (943K)",
+        "year": "1984"
+    },
+    {
+        "title": "Hotel Rwanda",
+        "url": "https://www.imdb.com/title/tt0395169/?ref_=chttp_t_220",
+        "rating": "8.1 (378K)",
+        "year": "2004"
+    },
+    {
+        "title": "A Man Escaped",
+        "url": "https://www.imdb.com/title/tt0049902/?ref_=chttp_t_221",
+        "rating": "8.2 (26K)",
+        "year": "1956"
+    },
+    {
+        "title": "Platoon",
+        "url": "https://www.imdb.com/title/tt0091763/?ref_=chttp_t_222",
+        "rating": "8.1 (446K)",
+        "year": "1986"
+    },
+    {
+        "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+        "url": "https://www.imdb.com/title/tt0325980/?ref_=chttp_t_223",
+        "rating": "8.1 (1.2M)",
+        "year": "2003"
+    },
+    {
+        "title": "La haine",
+        "url": "https://www.imdb.com/title/tt0113247/?ref_=chttp_t_224",
+        "rating": "8.1 (203K)",
+        "year": "1995"
+    },
+    {
+        "title": "Before Sunset",
+        "url": "https://www.imdb.com/title/tt0381681/?ref_=chttp_t_225",
+        "rating": "8.1 (294K)",
+        "year": "2004"
+    },
+    {
+        "title": "Jai Bhim",
+        "url": "https://www.imdb.com/title/tt15097216/?ref_=chttp_t_226",
+        "rating": "8.7 (221K)",
+        "year": "2021"
+    },
+    {
+        "title": "The Passion of Joan of Arc",
+        "url": "https://www.imdb.com/title/tt0019254/?ref_=chttp_t_227",
+        "rating": "8.1 (62K)",
+        "year": "1928"
+    },
+    {
+        "title": "The Best Years of Our Lives",
+        "url": "https://www.imdb.com/title/tt0036868/?ref_=chttp_t_228",
+        "rating": "8.1 (72K)",
+        "year": "1946"
+    },
+    {
+        "title": "The Exorcist",
+        "url": "https://www.imdb.com/title/tt0070047/?ref_=chttp_t_229",
+        "rating": "8.1 (465K)",
+        "year": "1973"
+    },
+    {
+        "title": "Rush",
+        "url": "https://www.imdb.com/title/tt1979320/?ref_=chttp_t_230",
+        "rating": "8.1 (523K)",
+        "year": "2013"
+    },
+    {
+        "title": "The Incredibles",
+        "url": "https://www.imdb.com/title/tt0317705/?ref_=chttp_t_231",
+        "rating": "8.0 (829K)",
+        "year": "2004"
+    },
+    {
+        "title": "The Wizard of Oz",
+        "url": "https://www.imdb.com/title/tt0032138/?ref_=chttp_t_232",
+        "rating": "8.1 (436K)",
+        "year": "1939"
+    },
+    {
+        "title": "Network",
+        "url": "https://www.imdb.com/title/tt0074958/?ref_=chttp_t_233",
+        "rating": "8.1 (174K)",
+        "year": "1976"
+    },
+    {
+        "title": "Stand by Me",
+        "url": "https://www.imdb.com/title/tt0092005/?ref_=chttp_t_234",
+        "rating": "8.1 (452K)",
+        "year": "1986"
+    },
+    {
+        "title": "Hachi: A Dog's Tale",
+        "url": "https://www.imdb.com/title/tt1028532/?ref_=chttp_t_235",
+        "rating": "8.1 (318K)",
+        "year": "2009"
+    },
+    {
+        "title": "The Sound of Music",
+        "url": "https://www.imdb.com/title/tt0059742/?ref_=chttp_t_236",
+        "rating": "8.1 (267K)",
+        "year": "1965"
+    },
+    {
+        "title": "My Father and My Son",
+        "url": "https://www.imdb.com/title/tt0476735/?ref_=chttp_t_237",
+        "rating": "8.2 (95K)",
+        "year": "2005"
+    },
+    {
+        "title": "The Handmaiden",
+        "url": "https://www.imdb.com/title/tt4016934/?ref_=chttp_t_238",
+        "rating": "8.1 (179K)",
+        "year": "2016"
+    },
+    {
+        "title": "To Be or Not to Be",
+        "url": "https://www.imdb.com/title/tt0035446/?ref_=chttp_t_239",
+        "rating": "8.1 (45K)",
+        "year": "1942"
+    },
+    {
+        "title": "Into the Wild",
+        "url": "https://www.imdb.com/title/tt0758758/?ref_=chttp_t_240",
+        "rating": "8.1 (667K)",
+        "year": "2007"
+    },
+    {
+        "title": "The Battle of Algiers",
+        "url": "https://www.imdb.com/title/tt0058946/?ref_=chttp_t_241",
+        "rating": "8.1 (67K)",
+        "year": "1966"
+    },
+    {
+        "title": "The Iron Giant",
+        "url": "https://www.imdb.com/title/tt0129167/?ref_=chttp_t_242",
+        "rating": "8.1 (235K)",
+        "year": "1999"
+    },
+    {
+        "title": "Groundhog Day",
+        "url": "https://www.imdb.com/title/tt0107048/?ref_=chttp_t_243",
+        "rating": "8.0 (698K)",
+        "year": "1993"
+    },
+    {
+        "title": "The Grapes of Wrath",
+        "url": "https://www.imdb.com/title/tt0032551/?ref_=chttp_t_244",
+        "rating": "8.1 (102K)",
+        "year": "1940"
+    },
+    {
+        "title": "Amores Perros",
+        "url": "https://www.imdb.com/title/tt0245712/?ref_=chttp_t_245",
+        "rating": "8.0 (256K)",
+        "year": "2000"
+    },
+    {
+        "title": "Rebecca",
+        "url": "https://www.imdb.com/title/tt0032976/?ref_=chttp_t_246",
+        "rating": "8.1 (149K)",
+        "year": "1940"
+    },
+    {
+        "title": "The Help",
+        "url": "https://www.imdb.com/title/tt1454029/?ref_=chttp_t_247",
+        "rating": "8.1 (502K)",
+        "year": "2011"
+    },
+    {
+        "title": "Cool Hand Luke",
+        "url": "https://www.imdb.com/title/tt0061512/?ref_=chttp_t_248",
+        "rating": "8.1 (191K)",
+        "year": "1967"
+    },
+    {
+        "title": "It Happened One Night",
+        "url": "https://www.imdb.com/title/tt0025316/?ref_=chttp_t_249",
+        "rating": "8.1 (115K)",
+        "year": "1934"
+    },
+    {
+        "title": "Drishyam",
+        "url": "https://www.imdb.com/title/tt4430212/?ref_=chttp_t_250",
+        "rating": "8.2 (98K)",
+        "year": "2015"
+    }
+]
