@@ -3,71 +3,15 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/gocolly/colly/v2"
+	"github.com/google/uuid"
 	"github.com/tebeka/selenium"
 	"go-films-pipline/model"
 	"log"
+	"strconv"
+	"strings"
 	"sync"
 	"time"
 )
-
-type Scraper struct {
-	baseURL   string
-	maxMovies int
-	collector *colly.Collector
-	movies    []model.Movie
-	mu        sync.Mutex
-}
-
-func NewScraper(maxMovies int) *Scraper {
-	c := colly.NewCollector(
-		colly.AllowURLRevisit(),
-		colly.MaxDepth(2),
-		colly.UserAgent("Mozilla/5.0 (Macintosh; Intel Mac OS X 14_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15"),
-		colly.Async(true),
-	)
-
-	c.Limit(&colly.LimitRule{
-		DomainGlob:  "*",
-		Parallelism: 2,
-		Delay:       1 * time.Second,
-	})
-
-	return &Scraper{
-		baseURL:   "https://www.imdb.com",
-		maxMovies: maxMovies,
-		collector: c,
-		movies:    make([]model.Movie, 0),
-	}
-}
-
-func (s *Scraper) ScrapeMovies() ([]model.Movie, error) {
-	c := s.collector.Clone()
-
-	count := 0
-
-	c.OnHTML("td.titleColumn a", func(e *colly.HTMLElement) {
-		if count >= s.maxMovies {
-			return
-		}
-
-		movieURL := fmt.Sprintf("%s%s", s.baseURL, e.Attr("href"))
-		s.scrapeMovieDetails(movieURL)
-		count++
-	})
-
-	err := c.Visit(s.baseURL + "/chart/top/")
-	if err != nil {
-		return nil, fmt.Errorf("error visiting IMDB: %w", err)
-	}
-	c.Wait()
-	return s.movies, nil
-
-}
-
-func (s *Scraper) scrapeMovieDetails(url string) {
-
-}
 
 type Film struct {
 	Title  string
@@ -76,7 +20,7 @@ type Film struct {
 	Year   string
 }
 
-func scrapeIMDB(wg *sync.WaitGroup, films chan<- Film) {
+func ScrapeIMDB(wg *sync.WaitGroup, films chan<- Film) {
 
 	defer wg.Done()
 
@@ -144,12 +88,79 @@ func scrapeIMDB(wg *sync.WaitGroup, films chan<- Film) {
 	for _, item := range resultSlice {
 		if movieMap, ok := item.(map[string]interface{}); ok {
 			fmt.Println(movieMap["title"].(string))
-			films <- Film{
-				Title:  fmt.Sprintf("%v", movieMap["title"]),
-				URL:    fmt.Sprintf("%v", movieMap["url"]),
-				Rating: fmt.Sprintf("%v", movieMap["rating"]),
-				Year:   fmt.Sprintf("%v", movieMap["year"]),
+
+			url := movieMap["url"].(string)
+
+			if err := driver.Get(url); err != nil {
+				log.Fatalf("Erreur dans le lien de la film spécifique: %v", err)
 			}
+			time.Sleep(1 * time.Second)
+
+			execScript := `
+				const elemts=document.querySelector("ul.title-pc-list").querySelectorAll("li");
+				const genre = Array.from(document.querySelector("div.ipc-chip-list__scroller").querySelectorAll("a span")).map(e => e.textContent);
+				const plot = document.querySelector('p[data-testid="plot"] span').textContent
+				return {
+					"director":elemts[0].textContent.split(" "),
+					"writers":elemts[1].textContent.split(" "),
+					"stars":elemts[2].textContent.split(" "),
+					"genre":genre,
+					"plot":plot,
+				}
+			`
+
+			result1, err := driver.ExecuteScript(execScript, nil)
+			if err != nil {
+				log.Fatalf("Erreur lors de l'exécution du script de info de films specifique: %v", err)
+			}
+
+			souInfoMovieMap, ok := result1.(map[string]interface{})
+			if !ok {
+				log.Fatalf("Erreur: résultat inattendu")
+			}
+
+			ratingNumb, err := strconv.ParseFloat(strings.Fields(movieMap["rating"].(string))[0], 64)
+			if err != nil {
+				fmt.Println("Erreur de conversion xxxxxxx:", err)
+			}
+
+			movie := model.Movie{
+				ID:          uuid.New().String(),
+				Title:       movieMap["title"].(string),
+				Rating:      ratingNumb,
+				ReleaseDate: movieMap["year"].(string),
+				Director: func(directorInterfaces []interface{}) []string {
+					strSlice := make([]string, len(directorInterfaces))
+					for i, v := range directorInterfaces {
+						strSlice[i] = v.(string)
+					}
+					return strSlice
+				}(souInfoMovieMap["director"].([]interface{})),
+				Genre: func(genreInterfaces []interface{}) []string {
+					strSlice := make([]string, len(genreInterfaces))
+					for i, v := range genreInterfaces {
+						strSlice[i] = v.(string)
+					}
+					return strSlice
+				}(souInfoMovieMap["genre"].([]interface{})),
+				Plot: souInfoMovieMap["plot"].(string),
+				Stars: func(starInterfaces []interface{}) []string {
+					strSlice := make([]string, len(starInterfaces))
+					for i, v := range starInterfaces {
+						strSlice[i] = v.(string)
+					}
+					return strSlice
+				}(souInfoMovieMap["stars"].([]interface{})),
+				Writers: func(writerInterfaces []interface{}) []string {
+					strSlice := make([]string, len(writerInterfaces))
+					for i, v := range writerInterfaces {
+						strSlice[i] = v.(string)
+					}
+					return strSlice
+				}(souInfoMovieMap["writers"].([]interface{})),
+			}
+			fmt.Println(movie.Writers)
+
 		}
 	}
 }
@@ -160,13 +171,7 @@ func main() {
 	filmsChannel := make(chan Film)
 
 	wg.Add(1)
-	go scrapeIMDB(wg, filmsChannel)
-
-	go func() {
-		for film := range filmsChannel {
-			fmt.Printf("Title: %s, Year: %s, Rating: %s\n", film.Title, film.Year, film.Rating)
-		}
-	}()
+	go ScrapeIMDB(wg, filmsChannel)
 
 	wg.Wait()
 
