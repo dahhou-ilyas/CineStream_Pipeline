@@ -4,6 +4,7 @@ type Movie struct {
 	ID          string   `json:"id"`
 	Title       string   `json:"title"`
 	Rating      float64  `json:"rating"`
+	Year        string   `json:"year"`
 	ReleaseDate string   `json:"release_date"`
 	Director    []string `json:"director"`
 	Genre       []string `json:"genre"`

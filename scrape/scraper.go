@@ -13,14 +13,7 @@ import (
 	"time"
 )
 
-type Film struct {
-	Title  string
-	URL    string
-	Rating string
-	Year   string
-}
-
-func ScrapeIMDB(wg *sync.WaitGroup, films chan<- Film) {
+func ScrapeIMDB(wg *sync.WaitGroup, films chan<- model.Movie) {
 
 	defer wg.Done()
 
@@ -50,7 +43,7 @@ func ScrapeIMDB(wg *sync.WaitGroup, films chan<- Film) {
 		log.Fatalf("Erreur lors du chargement de la page: %v", err)
 	}
 
-	time.Sleep(5 * time.Second)
+	time.Sleep(2 * time.Second)
 
 	extractScript := `
         return Array.from(document.querySelectorAll('li.ipc-metadata-list-summary-item'))
@@ -128,6 +121,7 @@ func ScrapeIMDB(wg *sync.WaitGroup, films chan<- Film) {
 				ID:          uuid.New().String(),
 				Title:       movieMap["title"].(string),
 				Rating:      ratingNumb,
+				Year:        movieMap["year"].(string),
 				ReleaseDate: movieMap["year"].(string),
 				Director: func(directorInterfaces []interface{}) []string {
 					strSlice := make([]string, len(directorInterfaces))
@@ -159,7 +153,7 @@ func ScrapeIMDB(wg *sync.WaitGroup, films chan<- Film) {
 					return strSlice
 				}(souInfoMovieMap["writers"].([]interface{})),
 			}
-			fmt.Println(movie.Writers)
+			films <- movie
 
 		}
 	}
@@ -168,10 +162,16 @@ func ScrapeIMDB(wg *sync.WaitGroup, films chan<- Film) {
 func main() {
 	wg := new(sync.WaitGroup)
 
-	filmsChannel := make(chan Film)
+	filmsChannel := make(chan model.Movie)
 
 	wg.Add(1)
 	go ScrapeIMDB(wg, filmsChannel)
+
+	go func() {
+		for film := range filmsChannel {
+			fmt.Printf("Title: %s, Year: %s, Rating: %s\n", film.Title, film.Year, film.Rating)
+		}
+	}()
 
 	wg.Wait()
 
