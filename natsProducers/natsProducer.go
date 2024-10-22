@@ -5,11 +5,9 @@ import (
 	"fmt"
 	"github.com/nats-io/nats.go"
 	"log"
+	"os"
+	"os/signal"
 )
-
-func main() {
-	fmt.Println("NATS producer started")
-}
 
 func Producer(ctx context.Context) {
 	nc, err := nats.Connect("nats://localhost:4222")
@@ -71,5 +69,39 @@ func consumer(ctx context.Context) {
 	}()
 
 	log.Println("Subscribed to", subject)
+
+	for {
+		select {
+		case <-ctx.Done():
+			log.Println("exiting from consumer")
+			return
+		case msg := <-messages:
+			log.Println("received message", msg.Subject, string(msg.Data))
+		}
+	}
+}
+
+func main() {
+	ctx, cancel := context.WithCancel(context.Background())
+
+	go func() {
+		sigChannel := make(chan os.Signal, 1)
+
+		signal.Notify(sigChannel, os.Interrupt)
+
+		<-sigChannel
+
+		close(sigChannel)
+		cancel()
+	}()
+
+	go consumer(ctx)
+
+	go Producer(ctx)
+
+	<-ctx.Done()
+
+	log.Println("server shutdown completed")
+	log.Println("exiting gracefully")
 
 }
