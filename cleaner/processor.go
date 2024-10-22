@@ -198,4 +198,29 @@ func analyzePlotTone(plot string) string {
 		}
 		toneScores[tone] = score
 	}
+
+	var (
+		primaryTone    string
+		primaryScore   float64
+		secondaryTone  string
+		secondaryScore float64
+	)
+
+	for ton, score := range toneScores {
+		if score > primaryScore {
+			secondaryTone = primaryTone
+			primaryTone = ton
+			secondaryScore = primaryScore
+			primaryScore = score
+		} else if score > secondaryScore {
+			secondaryTone = ton
+			secondaryScore = score
+		}
+	}
+
+	if secondaryScore >= primaryScore*0.5 {
+		return primaryTone + "-" + secondaryTone
+	}
+
+	return primaryTone
 }
