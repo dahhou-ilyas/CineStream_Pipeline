@@ -39,3 +39,20 @@ func categorizeDecade(year string) string {
 
 	return "Unknown"
 }
+
+func categorizeGenres(genres []string) []string {
+	categories := make([]string, 0)
+
+	mainCategory := map[string][]string{
+		"Action-Adventure": {"Action", "Adventure", "Thriller"},
+		"Drama-Romance":    {"Drama", "Romance"},
+		"Comedy-Family":    {"Comedy", "Family", "Animation"},
+		"Sci-Fi-Fantasy":   {"Science Fiction", "Fantasy", "Sci-Fi"},
+	}
+
+	genreSet := make(map[string]bool)
+	for _, genre := range genres {
+		genreSet[genre] = true
+	}
+
+}
