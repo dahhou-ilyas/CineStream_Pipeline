@@ -1,6 +1,9 @@
 package cleaner
 
-import "go-films-pipline/model"
+import (
+	"go-films-pipline/model"
+	"time"
+)
 
 type MovieEnriched struct {
 	model.Movie
@@ -26,4 +29,13 @@ type Statistics struct {
 
 func ProcessMovie(movie model.Movie) MovieEnriched {
 	return MovieEnriched{}
+}
+
+func categorizeDecade(year string) string {
+	if y, err := time.Parse("2006", year); err != nil {
+		decad := (y.Year() / 10) * 10
+		return string(decad) + "s"
+	}
+
+	return "Unknown"
 }
