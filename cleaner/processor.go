@@ -43,7 +43,7 @@ func categorizeDecade(year string) string {
 func categorizeGenres(genres []string) []string {
 	categories := make([]string, 0)
 
-	mainCategory := map[string][]string{
+	mainCategories := map[string][]string{
 		"Action-Adventure": {"Action", "Adventure", "Thriller"},
 		"Drama-Romance":    {"Drama", "Romance"},
 		"Comedy-Family":    {"Comedy", "Family", "Animation"},
@@ -55,4 +55,14 @@ func categorizeGenres(genres []string) []string {
 		genreSet[genre] = true
 	}
 
+	for category, relatedGenres := range mainCategories {
+		for _, genre := range relatedGenres {
+			if genreSet[genre] {
+				categories = append(categories, category)
+				break
+			}
+		}
+	}
+
+	return categories
 }
