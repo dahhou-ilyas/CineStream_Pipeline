@@ -224,3 +224,31 @@ func analyzePlotTone(plot string) string {
 
 	return primaryTone
 }
+
+func calculateKeywordScore(plot string) float64 {
+	positiveKeywords := []string{"masterpiece", "brilliant", "outstanding", "innovative"}
+	negativeKeywords := []string{"cliché", "predictable", "boring", "terrible"}
+
+	score := 0.0
+	words := strings.Fields(strings.ToLower(plot))
+
+	for _, word := range words {
+		for _, positive := range positiveKeywords {
+			if strings.Contains(word, positive) {
+				score += 0.5
+			}
+		}
+		for _, negative := range negativeKeywords {
+			if strings.Contains(word, negative) {
+				score -= 0.5
+			}
+		}
+	}
+	score = (score + 5) / 10
+	if score < 0 {
+		score = 0
+	} else if score > 10 {
+		score = 10
+	}
+	return score
+}
