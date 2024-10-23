@@ -5,8 +5,6 @@ import (
 	"fmt"
 	"github.com/nats-io/nats.go"
 	"log"
-	"os"
-	"os/signal"
 )
 
 func Producer(ctx context.Context) {
@@ -81,6 +79,7 @@ func consumer(ctx context.Context) {
 	}
 }
 
+/*
 func main() {
 	ctx, cancel := context.WithCancel(context.Background())
 
@@ -104,4 +103,4 @@ func main() {
 	log.Println("server shutdown completed")
 	log.Println("exiting gracefully")
 
-}
+}*/

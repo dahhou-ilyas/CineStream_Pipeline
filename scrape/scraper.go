@@ -1,4 +1,4 @@
-package main
+package scrape
 
 import (
 	"context"
@@ -80,7 +80,6 @@ func ScrapeIMDB(wg *sync.WaitGroup, films chan<- model.Movie) {
 
 	for _, item := range resultSlice {
 		if movieMap, ok := item.(map[string]interface{}); ok {
-			fmt.Println(movieMap["title"].(string))
 
 			url := movieMap["url"].(string)
 
@@ -157,22 +156,4 @@ func ScrapeIMDB(wg *sync.WaitGroup, films chan<- model.Movie) {
 
 		}
 	}
-}
-
-func main() {
-	wg := new(sync.WaitGroup)
-
-	filmsChannel := make(chan model.Movie)
-
-	wg.Add(1)
-	go ScrapeIMDB(wg, filmsChannel)
-
-	go func() {
-		for film := range filmsChannel {
-			fmt.Printf("Title: %s, Year: %s, Rating: %s\n", film.Title, film.Year, film.Rating)
-		}
-	}()
-
-	wg.Wait()
-
 }
