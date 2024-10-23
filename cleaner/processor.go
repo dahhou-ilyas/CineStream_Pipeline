@@ -4,6 +4,7 @@ import (
 	"go-films-pipline/model"
 	"strings"
 	"time"
+	"unicode"
 )
 
 type MovieEnriched struct {
@@ -251,4 +252,30 @@ func calculateKeywordScore(plot string) float64 {
 		score = 10
 	}
 	return score
+}
+
+func cleanTitle(title string) string {
+	title = strings.TrimFunc(title, func(r rune) bool {
+		return !unicode.IsLetter(r) && !unicode.IsNumber(r) && r != ' '
+	})
+	lowerTitle := strings.ToLower(title)
+	for _, prefix := range []string{"the ", "a ", "an "} {
+		if strings.HasPrefix(lowerTitle, prefix) {
+			title = title[len(prefix):] + ", " + title[:len(prefix)-1]
+			break
+		}
+	}
+	return strings.TrimSpace(title)
+}
+
+func cleanName(name string) string {
+	name = strings.TrimSpace(name)
+	parts := strings.Fields(name)
+
+	// Capitaliser chaque partie du nom
+	for i, part := range parts {
+		parts[i] = strings.Title(strings.ToLower(part))
+	}
+
+	return strings.Join(parts, " ")
 }
