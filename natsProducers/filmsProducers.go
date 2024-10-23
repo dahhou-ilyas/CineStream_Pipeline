@@ -1,25 +1,43 @@
-package main
+package natsProducers
 
 import (
-	"fmt"
-	"go-films-pipline/model"
-	"go-films-pipline/scrape"
-	"sync"
+	"context"
+	"encoding/json"
+	"github.com/nats-io/nats.go"
+	"go-films-pipline/cleaner"
+	"log"
 )
 
-func main() {
-	wg := new(sync.WaitGroup)
+func Producer(ctx context.Context, films cleaner.MovieEnriched) {
+	nc, err := nats.Connect("nats://localhost:4222")
+	if err != nil {
+		log.Fatal("failed to connect to NATS server", err)
+	}
 
-	filmsChannel := make(chan model.Movie)
+	defer nc.Close()
 
-	wg.Add(1)
-	go scrape.ScrapeIMDB(wg, filmsChannel)
+	subject := "filmsChan"
 
-	go func() {
-		for film := range filmsChannel {
-			fmt.Printf("Title: %s, Year: %s, Rating: %s\n", film.Title, film.Year, film.Rating)
+	i := 0
+
+	select {
+	case <-ctx.Done():
+		log.Println("exiting from producer")
+		return
+	default:
+
+		byteSlice, err := json.Marshal(films)
+		if err != nil {
+			log.Fatal("failed to marshal films to json", err)
 		}
-	}()
 
-	wg.Wait()
+		errs := nc.Publish(subject, byteSlice)
+
+		if errs != nil {
+			log.Fatal("failed to publish message", err)
+		} else {
+			log.Println("published message", subject, byteSlice)
+		}
+	}
+
 }

@@ -1,4 +1,4 @@
-package main
+package natsProducers
 
 import (
 	"context"
@@ -7,7 +7,7 @@ import (
 	"log"
 )
 
-func Producer(ctx context.Context) {
+func producer(ctx context.Context) {
 	nc, err := nats.Connect("nats://localhost:4222")
 	if err != nil {
 		log.Fatal("failed to connect to NATS server", err)
