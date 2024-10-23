@@ -30,7 +30,25 @@ type Statistics struct {
 }
 
 func ProcessMovie(movie model.Movie) MovieEnriched {
-	return MovieEnriched{}
+
+	enriched := MovieEnriched{Movie: movie}
+
+	enriched.DecadeCategory = categorizeDecade(movie.Year)
+
+	enriched.GenreCategories = categorizeGenres(movie.Genre)
+
+	enriched.SentimentAnalysis.KeywordScore = calculateKeywordScore(movie.Plot)
+
+	enriched.SentimentAnalysis.PlotTone = analyzePlotTone(movie.Plot)
+
+	return enriched
+}
+
+func CleanMovieData(movie model.Movie) {
+	movie.Title = strings.TrimSpace(movie.Title)
+
+	movie.Title = cleanTitle(movie.Title)
+
 }
 
 func categorizeDecade(year string) string {
@@ -272,10 +290,8 @@ func cleanName(name string) string {
 	name = strings.TrimSpace(name)
 	parts := strings.Fields(name)
 
-	// Capitaliser chaque partie du nom
 	for i, part := range parts {
 		parts[i] = strings.Title(strings.ToLower(part))
 	}
-
 	return strings.Join(parts, " ")
 }
