@@ -49,6 +49,19 @@ func CleanMovieData(movie model.Movie) {
 
 	movie.Title = cleanTitle(movie.Title)
 
+	for i, director := range movie.Director {
+		movie.Director[i] = cleanName(director)
+	}
+
+	for i, genre := range movie.Genre {
+		movie.Genre[i] = strings.TrimSpace(genre)
+		movie.Genre[i] = strings.Title(strings.ToLower(movie.Genre[i]))
+	}
+
+	if year := strings.TrimSpace(movie.Year); len(year) == 4 {
+		movie.ReleaseDate = year + "-01-01"
+	}
+
 }
 
 func categorizeDecade(year string) string {
