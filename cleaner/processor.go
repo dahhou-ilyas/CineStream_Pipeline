@@ -44,7 +44,7 @@ func ProcessMovie(movie model.Movie) MovieEnriched {
 	return enriched
 }
 
-func CleanMovieData(movie model.Movie) {
+func CleanMovieData(movie *model.Movie) {
 	movie.Title = strings.TrimSpace(movie.Title)
 
 	movie.Title = cleanTitle(movie.Title)

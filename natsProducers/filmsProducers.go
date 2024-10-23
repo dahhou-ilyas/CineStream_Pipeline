@@ -18,8 +18,6 @@ func Producer(ctx context.Context, films cleaner.MovieEnriched) {
 
 	subject := "filmsChan"
 
-	i := 0
-
 	select {
 	case <-ctx.Done():
 		log.Println("exiting from producer")
