@@ -1,46 +1,46 @@
 ## 📝 Description
 
-CineStream Pipeline est une solution innovante de streaming de données dédiée au traitement en temps réel des informations cinématographiques. Cette plateforme combine la puissance du scraping automatisé avec Selenium, une diffusion événementielle via NATS, et un streaming temps réel via Server-Sent Events (SSE) avec Express.js.
+CineStream Pipeline is an innovative data streaming solution dedicated to real-time processing of cinematographic information. This platform combines the power of automated scraping with Selenium, event-driven communication via NATS, and real-time streaming via Server-Sent Events (SSE) with Express.js.
 
-### Vue d'ensemble
-- **Collecte de données** : Web scraping automatisé avec Selenium WebDriver
-- **Traitement ETL** : Pipeline de transformation sophistiqué
-- **Diffusion** : Messaging haute performance avec NATS
-- **Streaming** : Flux de données temps réel via SSE
-- **API** : Endpoint de streaming Express.js
+### Overview
+- **Data Collection**: Automated web scraping with Selenium WebDriver
+- **ETL Processing**: Sophisticated transformation pipeline
+- **Distribution**: High-performance messaging with NATS
+- **Streaming**: Real-time data flow via SSE
+- **API**: Express.js streaming endpoint
 
-## 🌟 Fonctionnalités clés
+## 🌟 Key Features
 
-### Scraping avancé avec Selenium
-- Navigation dynamique des pages IMDB
-- Support des interactions JavaScript complexes
-- Extraction robuste des données avec WebDriverWait
-- Support des éléments dynamiques et des iframes
-- Gestion intelligente des temps de chargement
+### Advanced Scraping with Selenium
+- Dynamic IMDB page navigation
+- Support for complex JavaScript interactions
+- Robust data extraction with WebDriverWait
+- Support for dynamic elements and iframes
+- Intelligent loading time management
 
-### Pipeline ETL
-- Validation et nettoyage des données
-- Enrichissement automatique des métadonnées
-- Normalisation des formats
-- Gestion des doublons et des conflits
+### ETL Pipeline
+- Data validation and cleaning
+- Automatic metadata enrichment
+- Format normalization
+- Duplicate and conflict management
 
-### Messaging temps réel avec NATS
-- Communication ultra-rapide et légère
-- Support des patterns Pub/Sub et Request/Reply
-- Scalabilité horizontale native
-- Persistance des messages avec NATS JetStream
+### Real-time Messaging with NATS
+- Ultra-fast and lightweight communication
+- Support for Pub/Sub and Request/Reply patterns
+- Native horizontal scalability
+- Message persistence with NATS JetStream
 
-### Streaming API avec Express.js et SSE
-- Endpoint de streaming unique `/api/movies/stream`
-- Server-Sent Events pour une communication temps réel
-- Connexion persistante et efficace
-- Gestion automatique des reconnexions
-- Support des backpressure
+### Streaming API with Express.js and SSE
+- Single streaming endpoint `/api/movies/stream`
+- Server-Sent Events for real-time communication
+- Persistent and efficient connection
+- Automatic reconnection handling
+- Backpressure support
 
-## 💻 Prérequis techniques
+## 💻 Technical Prerequisites
 
-- Go 1.21 ou supérieur
-- Node.js 18+ et npm
+- Go 1.21 or higher
+- Node.js 18+ and npm
 - Docker & Docker Compose
 - NATS 2.9+
 - Selenium WebDriver
@@ -48,26 +48,26 @@ CineStream Pipeline est une solution innovante de streaming de données dédiée
 
 ## 🚀 Installation
 
-1. **Cloner le repository**
+1. **Clone the repository**
 ```bash
-git clone https://github.com/votre-username/cinestream-pipeline.git
+git clone https://github.com/your-username/cinestream-pipeline.git
 cd cinestream-pipeline
 ```
 
-2. **Installation des WebDrivers**
+2. **WebDrivers Installation**
 ```bash
-# Installation de ChromeDriver
+# ChromeDriver Installation
 wget https://chromedriver.storage.googleapis.com/[VERSION]/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
 sudo mv chromedriver /usr/local/bin/
 ```
 
-3. **Lancement de l'infrastructure**
+3. **Launch Infrastructure**
 ```bash
 docker-compose up -d
 ```
 
-4. **Démarrage des services**
+4. **Start Services**
 ```bash
 # Scraper
 cd scraper
@@ -79,10 +79,10 @@ npm install
 npm run start
 ```
 
-## 📊 Exemple de configuration Selenium
+## 📊 Selenium Configuration Example
 
 ```go
-// Exemple de configuration du WebDriver
+// WebDriver configuration example
 func setupSelenium() (*selenium.WebDriver, error) {
     caps := selenium.Capabilities{
         "browserName": "chrome",
@@ -109,24 +109,24 @@ func setupSelenium() (*selenium.WebDriver, error) {
 }
 ```
 
-## 📊 Connexion au flux SSE
+## 📊 SSE Stream Connection
 
 ```javascript
-// Exemple de client JavaScript
+// JavaScript client example
 const eventSource = new EventSource('http://localhost:3000/api/movies/stream');
 
 eventSource.onmessage = (event) => {
     const movie = JSON.parse(event.data);
-    console.log('Nouveau film reçu:', movie);
+    console.log('New movie received:', movie);
 };
 
 eventSource.onerror = (error) => {
-    console.error('Erreur SSE:', error);
+    console.error('SSE Error:', error);
     eventSource.close();
 };
 ```
 
-### Structure des événements SSE
+### SSE Event Structure
 ```json
 {
     "id": "msg_123",
@@ -157,4 +157,3 @@ eventSource.onerror = (error) => {
     }
 }
 ```
-
